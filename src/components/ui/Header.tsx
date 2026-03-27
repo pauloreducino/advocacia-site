@@ -1,34 +1,48 @@
-'use client';
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { getWhatsAppUrl } from '@/lib/utils';
+"use client";
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { useRouter, usePathname } from "next/navigation";
+import { getWhatsAppUrl } from "@/lib/utils";
 
 const NAV_LINKS = [
-  { label: 'Áreas', href: '#especialidades' },
-  { label: 'Sobre', href: '#sobre' },
-  { label: 'Resultados', href: '#resultados' },
-  { label: 'Blog', href: '/blog' },
-  { label: 'Contato', href: '#contato' },
+  { label: "Áreas", href: "#especialidades" },
+  { label: "Sobre", href: "#sobre" },
+  { label: "Resultados", href: "#resultados" },
+  { label: "Blog", href: "/blog" },
+  { label: "Contato", href: "#contato" },
 ];
 
 export default function Header() {
+  const router = useRouter();
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   const handleAnchor = (href: string) => {
     setMenuOpen(false);
-    if (href.startsWith('#')) {
-      const el = document.querySelector(href);
-      if (el) {
-        const top = el.getBoundingClientRect().top + window.scrollY - 100;
-        window.scrollTo({ top, behavior: 'smooth' });
+    if (href.startsWith("#")) {
+      const anchorId = href;
+
+      // Se não está na home, redireciona para home com o hash
+      if (pathname !== "/") {
+        router.push(`/${anchorId}`);
+        return;
       }
+
+      // Se está na home, faz o scroll suave
+      setTimeout(() => {
+        const el = document.querySelector(anchorId);
+        if (el) {
+          const top = el.getBoundingClientRect().top + window.scrollY - 100;
+          window.scrollTo({ top, behavior: "smooth" });
+        }
+      }, 100);
     }
   };
 
@@ -37,10 +51,10 @@ export default function Header() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? 'bg-primary/85 backdrop-blur-md border-b border-gold/20'
-            : 'bg-transparent'
+            ? "bg-primary/85 backdrop-blur-md border-b border-gold/20"
+            : "bg-transparent"
         }`}
-        style={{ borderBottomWidth: scrolled ? '1px' : '0' }}
+        style={{ borderBottomWidth: scrolled ? "1px" : "0" }}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-10 py-4 flex items-center justify-between">
           {/* Logo */}
@@ -56,7 +70,7 @@ export default function Header() {
           {/* Desktop nav */}
           <nav className="hidden lg:flex items-center gap-8" role="menu">
             {NAV_LINKS.map((link) =>
-              link.href.startsWith('#') ? (
+              link.href.startsWith("#") ? (
                 <button
                   key={link.href}
                   role="menuitem"
@@ -74,10 +88,10 @@ export default function Header() {
                 >
                   {link.label}
                 </Link>
-              )
+              ),
             )}
             <a
-              href={getWhatsAppUrl('Olá, gostaria de uma consulta gratuita.')}
+              href={getWhatsAppUrl("Olá, gostaria de uma consulta gratuita.")}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Agendar consulta gratuita via WhatsApp"
@@ -89,24 +103,24 @@ export default function Header() {
 
           {/* Mobile hamburger */}
           <button
-            aria-label={menuOpen ? 'Fechar menu' : 'Abrir menu'}
+            aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
             aria-expanded={menuOpen}
             onClick={() => setMenuOpen(!menuOpen)}
             className="lg:hidden flex flex-col gap-1.5 p-2"
           >
             <span
               className={`block w-6 h-px bg-gold transition-all duration-300 ${
-                menuOpen ? 'rotate-45 translate-y-2' : ''
+                menuOpen ? "rotate-45 translate-y-2" : ""
               }`}
             />
             <span
               className={`block w-6 h-px bg-gold transition-all duration-300 ${
-                menuOpen ? 'opacity-0' : ''
+                menuOpen ? "opacity-0" : ""
               }`}
             />
             <span
               className={`block w-6 h-px bg-gold transition-all duration-300 ${
-                menuOpen ? '-rotate-45 -translate-y-2' : ''
+                menuOpen ? "-rotate-45 -translate-y-2" : ""
               }`}
             />
           </button>
@@ -116,20 +130,22 @@ export default function Header() {
       {/* Mobile drawer */}
       <div
         className={`fixed inset-0 z-40 bg-deep flex flex-col justify-center px-8 transition-all duration-500 lg:hidden ${
-          menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+          menuOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
         }`}
         role="dialog"
         aria-label="Menu de navegação"
       >
         <nav className="flex flex-col gap-8" role="menu">
           {NAV_LINKS.map((link, i) =>
-            link.href.startsWith('#') ? (
+            link.href.startsWith("#") ? (
               <button
                 key={link.href}
                 role="menuitem"
                 onClick={() => handleAnchor(link.href)}
                 className="text-left font-display text-3xl text-ivory hover:text-gold transition-colors duration-200 border-none bg-transparent cursor-pointer"
-                style={{ transitionDelay: menuOpen ? `${i * 60}ms` : '0ms' }}
+                style={{ transitionDelay: menuOpen ? `${i * 60}ms` : "0ms" }}
               >
                 {link.label}
               </button>
@@ -140,11 +156,11 @@ export default function Header() {
                 role="menuitem"
                 onClick={() => setMenuOpen(false)}
                 className="font-display text-3xl text-ivory hover:text-gold transition-colors duration-200"
-                style={{ transitionDelay: menuOpen ? `${i * 60}ms` : '0ms' }}
+                style={{ transitionDelay: menuOpen ? `${i * 60}ms` : "0ms" }}
               >
                 {link.label}
               </Link>
-            )
+            ),
           )}
           <a
             href={getWhatsAppUrl()}

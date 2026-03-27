@@ -1,3 +1,6 @@
+'use client';
+import Image from 'next/image';
+
 const DIFERENCIAIS = [
   'Atendimento personalizado e confidencial em todas as etapas',
   'Estratégia jurídica construída com base nos detalhes do seu caso',
@@ -31,22 +34,12 @@ export default function Sobre() {
                   clipPath: 'polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 24px 100%, 0 calc(100% - 24px))',
                 }}
               >
-                {/* Replace with: <Image src="/foto-advogado.jpg" alt="Dr. Henrique Cavalcante em seu escritório" fill className="object-cover" /> */}
-                <div className="w-full h-full flex items-center justify-center">
-                  <svg
-                    width="120"
-                    height="120"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#C9A84C"
-                    strokeWidth="0.5"
-                    opacity="0.15"
-                    aria-hidden="true"
-                  >
-                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-                    <circle cx="12" cy="7" r="4" />
-                  </svg>
-                </div>
+                <Image 
+                  src="/images/legal-agreement-handshake.jpg" 
+                  alt="Dr. Henrique Cavalcante em seu escritório" 
+                  fill 
+                  className="object-cover" 
+                />
               </div>
               {/* Gold frame overlay */}
               <div
