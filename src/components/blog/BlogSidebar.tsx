@@ -1,6 +1,6 @@
-import Link from 'next/link';
-import type { Category, Article } from '@/types';
-import { formatDate } from '@/lib/utils';
+import Link from "next/link";
+import type { Category, Article } from "@/types";
+import { formatDate } from "@/lib/utils";
 
 interface Props {
   categories: Category[];
@@ -8,17 +8,24 @@ interface Props {
   currentSlug?: string;
 }
 
-export default function BlogSidebar({ categories, recentArticles, currentSlug }: Props) {
+export default function BlogSidebar({
+  categories,
+  recentArticles,
+  currentSlug,
+}: Props) {
   return (
     <aside aria-label="Barra lateral do blog" className="flex flex-col gap-8">
       {/* Newsletter */}
       <div className="border border-gold/15 rounded p-6 bg-surface/50">
-        <p className="text-[10px] text-gold tracking-[2px] uppercase mb-3">Newsletter</p>
+        <p className="text-[10px] text-gold tracking-[2px] uppercase mb-3">
+          Newsletter
+        </p>
         <p className="font-display text-ivory text-[17px] mb-2 leading-snug">
           Receba insights jurídicos
         </p>
         <p className="text-muted text-[13px] mb-5 leading-relaxed">
-          Artigos sobre direito criminal, empresarial e muito mais — direto no seu e-mail.
+          Artigos sobre direito criminal, empresarial e muito mais — direto no
+          seu e-mail.
         </p>
         <div className="flex flex-col gap-3">
           <input
@@ -38,16 +45,21 @@ export default function BlogSidebar({ categories, recentArticles, currentSlug }:
 
       {/* Categories */}
       <div className="border border-gold/15 rounded p-6 bg-surface/50">
-        <p className="text-[10px] text-gold tracking-[2px] uppercase mb-5">Categorias</p>
+        <p className="text-[10px] text-gold tracking-[2px] uppercase mb-5">
+          Categorias
+        </p>
         <ul className="flex flex-col gap-1" role="list">
           {categories.map((cat) => (
             <li key={cat.slug}>
               <Link
                 href={`/blog?categoria=${cat.slug}`}
+                scroll={false}
                 className="flex items-center justify-between py-2 text-muted text-[13px] hover:text-gold transition-colors duration-200 border-b border-gold/5 last:border-0"
               >
                 <span>{cat.label}</span>
-                <span className="text-muted/50 text-[11px]">{cat.count ?? 0}</span>
+                <span className="text-muted/50 text-[11px]">
+                  {cat.count ?? 0}
+                </span>
               </Link>
             </li>
           ))}
@@ -56,7 +68,9 @@ export default function BlogSidebar({ categories, recentArticles, currentSlug }:
 
       {/* Recent articles */}
       <div className="border border-gold/15 rounded p-6 bg-surface/50">
-        <p className="text-[10px] text-gold tracking-[2px] uppercase mb-5">Artigos recentes</p>
+        <p className="text-[10px] text-gold tracking-[2px] uppercase mb-5">
+          Artigos recentes
+        </p>
         <ul className="flex flex-col gap-4" role="list">
           {recentArticles
             .filter((a) => a.slug !== currentSlug)
@@ -70,7 +84,9 @@ export default function BlogSidebar({ categories, recentArticles, currentSlug }:
                   <p className="text-ivory text-[13px] leading-snug group-hover:text-gold transition-colors duration-200 line-clamp-2">
                     {a.title}
                   </p>
-                  <p className="text-muted/60 text-[11px] mt-1">{formatDate(a.date)}</p>
+                  <p className="text-muted/60 text-[11px] mt-1">
+                    {formatDate(a.date)}
+                  </p>
                 </Link>
               </li>
             ))}
@@ -79,11 +95,13 @@ export default function BlogSidebar({ categories, recentArticles, currentSlug }:
 
       {/* Social */}
       <div className="border border-gold/15 rounded p-6 bg-surface/50">
-        <p className="text-[10px] text-gold tracking-[2px] uppercase mb-5">Redes sociais</p>
+        <p className="text-[10px] text-gold tracking-[2px] uppercase mb-5">
+          Redes sociais
+        </p>
         <div className="flex flex-col gap-3">
           {[
-            { label: 'LinkedIn', href: 'https://linkedin.com', icon: 'in' },
-            { label: 'Instagram', href: 'https://instagram.com', icon: '✦' },
+            { label: "LinkedIn", href: "https://linkedin.com", icon: "in" },
+            { label: "Instagram", href: "https://instagram.com", icon: "✦" },
           ].map((s) => (
             <a
               key={s.label}

@@ -1,18 +1,18 @@
-'use client';
-import Image from 'next/image';
+"use client";
+import Image from "next/image";
 
 const DIFERENCIAIS = [
-  'Atendimento personalizado e confidencial em todas as etapas',
-  'Estratégia jurídica construída com base nos detalhes do seu caso',
-  'Comunicação clara e transparente — sem juridiquês',
-  'Presença ativa nos tribunais de SP e instâncias superiores',
+  "Atendimento personalizado e confidencial em todas as etapas",
+  "Estratégia jurídica construída com base nos detalhes do seu caso",
+  "Comunicação clara e transparente — sem juridiquês",
+  "Presença ativa nos tribunais de SP e instâncias superiores",
 ];
 
 const STATS = [
-  { num: 15, suffix: '+', label: 'Anos de experiência' },
-  { num: 1200, suffix: '+', label: 'Casos encerrados' },
-  { num: 94, suffix: '%', label: 'Taxa de êxito' },
-  { num: 300, suffix: '+', label: 'Clientes ativos' },
+  { num: 15, suffix: "+", label: "Anos de experiência" },
+  { num: 1200, suffix: "+", label: "Casos encerrados" },
+  { num: 94, suffix: "%", label: "Taxa de êxito" },
+  { num: 300, suffix: "+", label: "Clientes ativos" },
 ];
 
 export default function Sobre() {
@@ -31,28 +31,31 @@ export default function Sobre() {
               <div
                 className="aspect-square bg-slate overflow-hidden"
                 style={{
-                  clipPath: 'polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 24px 100%, 0 calc(100% - 24px))',
+                  clipPath:
+                    "polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 24px 100%, 0 calc(100% - 24px))",
                 }}
               >
-                <Image 
-                  src="/images/legal-agreement-handshake.jpg" 
-                  alt="Dr. Henrique Cavalcante em seu escritório" 
-                  fill 
-                  className="object-cover" 
+                <Image
+                  src="/images/legal-agreement-handshake.jpg"
+                  alt="Dr. Henrique Cavalcante em seu escritório"
+                  fill
+                  className="object-cover"
                 />
               </div>
               {/* Gold frame overlay */}
               <div
                 className="absolute inset-0 border border-gold/25 pointer-events-none"
                 style={{
-                  clipPath: 'polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 24px 100%, 0 calc(100% - 24px))',
+                  clipPath:
+                    "polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 24px 100%, 0 calc(100% - 24px))",
                 }}
               />
               {/* Offset shadow frame */}
               <div
                 className="absolute inset-0 border border-gold/10 pointer-events-none translate-x-4 translate-y-4 -z-10"
                 style={{
-                  clipPath: 'polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 24px 100%, 0 calc(100% - 24px))',
+                  clipPath:
+                    "polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 24px 100%, 0 calc(100% - 24px))",
                 }}
               />
             </div>
@@ -63,18 +66,26 @@ export default function Sobre() {
         <div className="order-1 lg:order-2">
           <p className="section-label reveal">Sobre</p>
           <h2 className="font-display text-3xl lg:text-4xl text-ivory mb-6 leading-tight reveal">
-            Advocacia que une<br />
+            Advocacia que une
+            <br />
             <span className="text-gold">técnica e estratégia</span>
           </h2>
-          <p className="text-muted leading-relaxed mb-4 reveal" style={{ fontSize: '1rem' }}>
-            Sou o Dr. Henrique Cavalcante, advogado criminalista e empresarial com mais de 15 anos
-            dedicados à defesa de pessoas e empresas nos tribunais de São Paulo e no Superior
-            Tribunal de Justiça.
+          <p
+            className="text-muted leading-relaxed mb-4 reveal"
+            style={{ fontSize: "1rem" }}
+          >
+            Sou o Dr. Henrique Cavalcante, advogado criminalista e empresarial
+            com mais de 15 anos dedicados à defesa de pessoas e empresas nos
+            tribunais de São Paulo e no Superior Tribunal de Justiça.
           </p>
-          <p className="text-muted leading-relaxed mb-8 reveal" style={{ fontSize: '1rem' }}>
-            Meu trabalho começa muito antes da audiência — na análise cuidadosa de cada detalhe do
-            caso, na construção de uma tese sólida e na antecipação de cada movimento da parte
-            contrária. Resultado não é sorte. É preparação.
+          <p
+            className="text-muted leading-relaxed mb-8 reveal"
+            style={{ fontSize: "1rem" }}
+          >
+            Meu trabalho começa muito antes da audiência — na análise cuidadosa
+            de cada detalhe do caso, na construção de uma tese sólida e na
+            antecipação de cada movimento da parte contrária. Resultado não é
+            sorte. É preparação.
           </p>
 
           {/* Diferenciais */}
@@ -97,7 +108,9 @@ export default function Sobre() {
                 >
                   <polyline points="20 6 9 17 4 12" />
                 </svg>
-                <span className="text-[14px] text-muted leading-relaxed">{d}</span>
+                <span className="text-[14px] text-muted leading-relaxed">
+                  {d}
+                </span>
               </li>
             ))}
           </ul>
@@ -118,7 +131,7 @@ export default function Sobre() {
           >
             <span
               className="font-number italic text-gold block mb-2"
-              style={{ fontSize: 'clamp(2.5rem, 5vw, 3.5rem)', lineHeight: 1 }}
+              style={{ fontSize: "clamp(2.5rem, 5vw, 3.5rem)", lineHeight: 1 }}
               data-count-up
               data-target={s.num}
               data-suffix={s.suffix}
