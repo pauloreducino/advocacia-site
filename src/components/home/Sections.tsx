@@ -1,0 +1,10 @@
+export { default as Hero } from './Hero';
+export { default as Especialidades } from './Especialidades';
+export { default as Sobre } from './Sobre';
+export { default as Resultados } from './Resultados';
+export { default as Formacao } from './Formacao';
+export { default as Depoimentos } from './Depoimentos';
+export { default as BlogPreview } from './BlogPreview';
+export { default as FAQ } from './FAQ';
+export { default as CTABanner } from './CTABanner';
+export { default as Contato } from './Contato';
