@@ -99,23 +99,52 @@ export default function BlogSidebar({
           Redes sociais
         </p>
         <div className="flex flex-col gap-3">
-          {[
-            { label: "LinkedIn", href: "https://linkedin.com", icon: "in" },
-            { label: "Instagram", href: "https://instagram.com", icon: "✦" },
-          ].map((s) => (
-            <a
-              key={s.label}
-              href={s.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-3 text-muted text-[13px] hover:text-gold transition-colors duration-200"
-            >
-              <span className="w-8 h-8 border border-gold/20 rounded-sm flex items-center justify-center text-gold text-[11px] font-bold">
-                {s.icon}
-              </span>
-              {s.label}
-            </a>
-          ))}
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 text-muted text-[13px] hover:text-gold transition-colors duration-200"
+            aria-label="Visite nosso LinkedIn"
+          >
+            <span className="w-8 h-8 border border-gold/20 rounded-sm flex items-center justify-center text-gold hover:bg-gold/10 transition-colors">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </span>
+            LinkedIn
+          </a>
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 text-muted text-[13px] hover:text-gold transition-colors duration-200"
+            aria-label="Visite nosso Instagram"
+          >
+            <span className="w-8 h-8 border border-gold/20 rounded-sm flex items-center justify-center text-gold hover:bg-gold/10 transition-colors">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <circle cx="17.5" cy="6.5" r="1.5" />
+              </svg>
+            </span>
+            Instagram
+          </a>
         </div>
       </div>
     </aside>
