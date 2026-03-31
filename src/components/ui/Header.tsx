@@ -65,12 +65,11 @@ export default function Header() {
             </span>
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-8" role="menu">
+          <nav className="hidden lg:flex items-center gap-8">
             {NAV_LINKS.map((link) =>
               link.href.startsWith("/#") ? (
                 <button
                   key={link.href}
-                  role="menuitem"
                   onClick={() => handleAnchor(link.href)}
                   className="nav-link text-[11px] text-muted hover:text-gold tracking-[2px] uppercase transition-colors duration-200 bg-transparent border-none cursor-pointer"
                 >
@@ -80,7 +79,6 @@ export default function Header() {
                 <Link
                   key={link.href}
                   href={link.href as any}
-                  role="menuitem"
                   className="nav-link text-[11px] text-muted hover:text-gold tracking-[2px] uppercase transition-colors duration-200"
                 >
                   {link.label}
@@ -121,12 +119,11 @@ export default function Header() {
         role="dialog"
         aria-label={t("mobileMenuAriaLabel")}
       >
-        <nav className="flex flex-col gap-8" role="menu">
+        <nav className="flex flex-col gap-8">
           {NAV_LINKS.map((link, i) =>
             link.href.startsWith("/#") ? (
               <button
                 key={link.href}
-                role="menuitem"
                 onClick={() => handleAnchor(link.href)}
                 className="text-left font-display text-3xl text-ivory hover:text-gold transition-colors duration-200 border-none bg-transparent cursor-pointer"
                 style={{ transitionDelay: menuOpen ? `${i * 60}ms` : "0ms" }}
@@ -137,7 +134,6 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href as any}
-                role="menuitem"
                 onClick={() => setMenuOpen(false)}
                 className="font-display text-3xl text-ivory hover:text-gold transition-colors duration-200"
                 style={{ transitionDelay: menuOpen ? `${i * 60}ms` : "0ms" }}
@@ -161,7 +157,7 @@ export default function Header() {
             </a>
           </div>
         </nav>
-        <p className="absolute bottom-8 left-8 text-[11px] text-muted/50 tracking-widest uppercase">
+        <p className="absolute bottom-8 left-8 text-[11px] text-muted/70 tracking-widest uppercase">
           OAB/SP 123.456
         </p>
       </div>

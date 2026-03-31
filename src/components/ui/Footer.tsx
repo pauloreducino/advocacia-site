@@ -66,10 +66,10 @@ export default async function Footer() {
         </div>
 
         <div className="border-t border-white/5 pt-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
-          <p className="text-[11px] text-muted/50">
+          <p className="text-[11px] text-muted/70">
             © {new Date().getFullYear()} Dr. Henrique Cavalcante · OAB/SP 123.456 · {t('rights')}
           </p>
-          <p className="text-[10px] text-muted/35 max-w-sm text-right leading-relaxed">
+          <p className="text-[11px] text-muted/60 max-w-sm text-right leading-relaxed">
             {t('disclaimer')}
           </p>
         </div>

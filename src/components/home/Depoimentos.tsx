@@ -178,8 +178,8 @@ export default function Depoimentos() {
             </svg>
           </button>
 
-          {/* Dots */}
-          <div className="flex items-center gap-2" role="tablist">
+          {/* Dots — área de toque 44px, visual preservado */}
+          <div className="flex items-center" role="tablist">
             {items.map((_, i) => (
               <button
                 key={i}
@@ -187,12 +187,14 @@ export default function Depoimentos() {
                 aria-selected={i === active}
                 aria-label={t("goTo", { n: i + 1 })}
                 onClick={() => go(i, i > active ? "next" : "prev")}
-                className={`rounded-full transition-all duration-300 ${
+                className="flex items-center justify-center w-11 h-11"
+              >
+                <span className={`block rounded-full transition-all duration-300 ${
                   i === active
                     ? "w-6 h-1.5 bg-gold"
-                    : "w-1.5 h-1.5 bg-gold/20 hover:bg-gold/40"
-                }`}
-              />
+                    : "w-1.5 h-1.5 bg-gold/40 hover:bg-gold/60"
+                }`} />
+              </button>
             ))}
           </div>
 
@@ -210,7 +212,7 @@ export default function Depoimentos() {
         </div>
 
         {/* Contador */}
-        <p className="text-center text-[11px] text-muted/35 tracking-[3px] mt-3 tabular-nums">
+        <p className="text-center text-[11px] text-muted/60 tracking-[3px] mt-3 tabular-nums">
           {String(active + 1).padStart(2, "0")} — {String(total).padStart(2, "0")}
         </p>
 
