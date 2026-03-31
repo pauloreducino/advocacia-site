@@ -1,5 +1,5 @@
 "use client";
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
@@ -27,6 +27,8 @@ export default function ArticlesGrid({
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState(initialCategory ?? "todos");
   const [page, setPage] = useState(1);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   // Monitorar mudanças no parâmetro 'categoria' da URL
   useEffect(() => {
@@ -36,6 +38,17 @@ export default function ArticlesGrid({
       setPage(1);
     }
   }, [searchParams]);
+
+  // Fechar dropdown ao clicar fora
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setDropdownOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   const filtered = useMemo(() => {
     const q = search.toLowerCase();
@@ -73,34 +86,61 @@ export default function ArticlesGrid({
           aria-label={t("searchAriaLabel")}
           className="w-full bg-surface border border-gold/15 text-ivory text-[14px] px-5 py-3 rounded-sm placeholder-muted/40 focus:outline-none focus:border-gold/40 transition-colors"
         />
-        <div
-          className="flex flex-wrap gap-2"
-          role="group"
-          aria-label={t("filterAriaLabel")}
-        >
+        {/* Category dropdown */}
+        <div ref={dropdownRef} className="relative w-full sm:w-72" role="group" aria-label={t("filterAriaLabel")}>
           <button
-            onClick={() => handleFilter("todos")}
-            className={`text-[11px] tracking-[1.5px] uppercase px-4 py-2 rounded-sm transition-colors duration-200 ${
-              category === "todos"
-                ? "bg-gold text-primary font-medium"
-                : "border border-gold/25 text-muted hover:border-gold/50 hover:text-gold"
+            onClick={() => setDropdownOpen((o) => !o)}
+            aria-haspopup="listbox"
+            aria-expanded={dropdownOpen}
+            className="w-full flex items-center justify-between gap-3 bg-surface border border-gold/20 hover:border-gold/50 text-[11px] tracking-[2px] uppercase px-5 py-3 rounded-sm transition-colors duration-200 group"
+          >
+            <span className="flex items-center gap-3">
+              <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+              <span className={category === "todos" ? "text-gold" : "text-ivory"}>
+                {category === "todos"
+                  ? t("all")
+                  : categories.find((c) => c.slug === category)?.label ?? t("all")}
+              </span>
+            </span>
+            <svg
+              width="10"
+              height="10"
+              viewBox="0 0 10 10"
+              fill="none"
+              aria-hidden="true"
+              className={`text-gold/60 transition-transform duration-300 flex-shrink-0 ${dropdownOpen ? "rotate-180" : ""}`}
+            >
+              <path d="M1 3L5 7L9 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </button>
+
+          {/* Dropdown list */}
+          <div
+            role="listbox"
+            aria-label={t("filterAriaLabel")}
+            className={`absolute left-0 right-0 top-full mt-1 z-20 bg-deep border border-gold/20 rounded-sm overflow-hidden shadow-xl transition-all duration-200 origin-top ${
+              dropdownOpen ? "opacity-100 scale-y-100 pointer-events-auto" : "opacity-0 scale-y-95 pointer-events-none"
             }`}
           >
-            {t("all")}
-          </button>
-          {categories.map((cat) => (
-            <button
-              key={cat.slug}
-              onClick={() => handleFilter(cat.slug)}
-              className={`text-[11px] tracking-[1.5px] uppercase px-4 py-2 rounded-sm transition-colors duration-200 ${
-                category === cat.slug
-                  ? "bg-gold text-primary font-medium"
-                  : "border border-gold/25 text-muted hover:border-gold/50 hover:text-gold"
-              }`}
-            >
-              {cat.label}
-            </button>
-          ))}
+            {[{ slug: "todos", label: t("all") }, ...categories.map((c) => ({ slug: c.slug, label: c.label }))].map((opt, i, arr) => (
+              <button
+                key={opt.slug}
+                role="option"
+                aria-selected={category === opt.slug}
+                onClick={() => { handleFilter(opt.slug); setDropdownOpen(false); }}
+                className={`w-full flex items-center gap-3 px-5 py-3 text-[11px] tracking-[1.5px] uppercase transition-colors duration-150 text-left ${
+                  i < arr.length - 1 ? "border-b border-gold/10" : ""
+                } ${
+                  category === opt.slug
+                    ? "text-gold bg-gold/5"
+                    : "text-muted hover:text-ivory hover:bg-white/5"
+                }`}
+              >
+                <span className={`w-1 h-1 rounded-full flex-shrink-0 transition-colors ${category === opt.slug ? "bg-gold" : "bg-transparent"}`} />
+                {opt.label}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
 
