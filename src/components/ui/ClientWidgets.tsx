@@ -28,11 +28,25 @@ export default function ClientWidgets() {
           }
         });
       },
-      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+      { threshold: 0.08 }
     );
 
     const elements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
     elements.forEach((el) => observer.observe(el));
+
+    // Revela imediatamente elementos já visíveis (ex: navegação via âncora)
+    const revealInView = () => {
+      document.querySelectorAll<HTMLElement>('.reveal:not(.visible), .reveal-left:not(.visible), .reveal-right:not(.visible)').forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          el.classList.add('visible');
+          observer.unobserve(el);
+        }
+      });
+    };
+    revealInView();
+    // Roda novamente após scroll suave terminar (~400ms)
+    const revealTimer = setTimeout(revealInView, 400);
 
     // CountUp observer
     const countObserver = new IntersectionObserver(
@@ -66,6 +80,7 @@ export default function ClientWidgets() {
       window.removeEventListener('scroll', onScroll);
       observer.disconnect();
       countObserver.disconnect();
+      clearTimeout(revealTimer);
     };
   }, []);
 

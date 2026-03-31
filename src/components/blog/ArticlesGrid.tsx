@@ -3,6 +3,7 @@ import { useState, useMemo, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import type { Article, Category } from "@/types";
 import { formatDate } from "@/lib/utils";
 
@@ -12,13 +13,16 @@ interface Props {
   articles: Article[];
   categories: Category[];
   initialCategory?: string;
+  locale?: string;
 }
 
 export default function ArticlesGrid({
   articles,
   categories,
   initialCategory,
+  locale,
 }: Props) {
+  const t = useTranslations("blog");
   const searchParams = useSearchParams();
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState(initialCategory ?? "todos");
@@ -65,14 +69,14 @@ export default function ArticlesGrid({
             setSearch(e.target.value);
             setPage(1);
           }}
-          placeholder="Buscar artigos..."
-          aria-label="Buscar artigos"
+          placeholder={t("searchPlaceholder")}
+          aria-label={t("searchAriaLabel")}
           className="w-full bg-surface border border-gold/15 text-ivory text-[14px] px-5 py-3 rounded-sm placeholder-muted/40 focus:outline-none focus:border-gold/40 transition-colors"
         />
         <div
           className="flex flex-wrap gap-2"
           role="group"
-          aria-label="Filtrar por categoria"
+          aria-label={t("filterAriaLabel")}
         >
           <button
             onClick={() => handleFilter("todos")}
@@ -82,7 +86,7 @@ export default function ArticlesGrid({
                 : "border border-gold/25 text-muted hover:border-gold/50 hover:text-gold"
             }`}
           >
-            Todos
+            {t("all")}
           </button>
           {categories.map((cat) => (
             <button
@@ -103,13 +107,13 @@ export default function ArticlesGrid({
       {/* Grid */}
       {paged.length === 0 ? (
         <p className="text-muted text-center py-16">
-          Nenhum artigo encontrado.
+          {t("noneFound")}
         </p>
       ) : (
         <div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12"
           role="list"
-          aria-label="Lista de artigos"
+          aria-label={t("articlesAriaLabel")}
         >
           {paged.map((a) => (
             <article
@@ -117,7 +121,7 @@ export default function ArticlesGrid({
               role="listitem"
               className="group flex flex-col"
             >
-              <Link href={`/blog/${a.slug}`} className="block">
+              <Link href={`/${locale ?? 'pt-br'}/blog/${a.slug}`} className="block">
                 <div className="relative h-48 rounded overflow-hidden bg-slate mb-4">
                   <Image
                     src={a.imageUrl}
@@ -140,7 +144,7 @@ export default function ArticlesGrid({
                 <div className="flex items-center gap-3 text-muted/60 text-[11px]">
                   <span>{formatDate(a.date)}</span>
                   <span>·</span>
-                  <span>{a.readTime} min de leitura</span>
+                  <span>{a.readTime} {t("readTime")}</span>
                 </div>
               </Link>
             </article>
@@ -150,7 +154,7 @@ export default function ArticlesGrid({
 
       {/* Pagination */}
       {totalPages > 1 && (
-        <nav aria-label="Paginação" className="flex justify-center gap-2">
+        <nav aria-label={t("pagination")} className="flex justify-center gap-2">
           {Array.from({ length: totalPages }, (_, i) => i + 1).map((p) => (
             <button
               key={p}
@@ -158,7 +162,7 @@ export default function ArticlesGrid({
                 setPage(p);
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }}
-              aria-label={`Página ${p}`}
+              aria-label={t("pageLabel", { page: p })}
               aria-current={p === page ? "page" : undefined}
               className={`w-9 h-9 text-[13px] rounded-sm transition-colors duration-200 ${
                 p === page

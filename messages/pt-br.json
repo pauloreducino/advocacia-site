@@ -1,0 +1,208 @@
+{
+  "header": {
+    "areas": "Áreas",
+    "sobre": "Sobre",
+    "resultados": "Resultados",
+    "blog": "Blog",
+    "contato": "Contato",
+    "cta": "Consulta gratuita",
+    "ctaAriaLabel": "Agendar consulta gratuita via WhatsApp",
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu",
+    "mobileMenuAriaLabel": "Menu de navegação",
+    "language": "Idioma:"
+  },
+  "hero": {
+    "credential": "OAB/SP 123.456 · 15 anos de atuação",
+    "title1": "Sua defesa começa",
+    "title2": "com a escolha certa.",
+    "description": "Advocacia criminal e empresarial de alto padrão. Estratégia, sigilo e resultados — do primeiro contato ao trânsito em julgado.",
+    "cta1": "Agendar consulta",
+    "cta1AriaLabel": "Agendar consulta via WhatsApp",
+    "cta2": "Conheça o escritório",
+    "badge1": "94% de êxito",
+    "badge2": "+1.200 casos",
+    "photoAlt": "Dr. Henrique - Advogado especialista em direito criminal e empresarial",
+    "scrollHint": "Rolar para conhecer",
+    "whatsappMsg": "Olá, gostaria de agendar uma consulta com o Dr. Henrique."
+  },
+  "especialidades": {
+    "sectionLabel": "Áreas de atuação",
+    "title1": "O que posso fazer",
+    "title2": "por você",
+    "items": [
+      { "titulo": "Direito Criminal", "descricao": "Defesa em crimes contra a pessoa e patrimônio · Habeas corpus · Recursos nos tribunais superiores" },
+      { "titulo": "Direito Empresarial", "descricao": "Contratos, M&A e proteção societária · Recuperação judicial · Due diligence" },
+      { "titulo": "Direito Tributário", "descricao": "Planejamento fiscal · Recuperação de créditos tributários · Defesa em autuações fiscais" },
+      { "titulo": "Direito Trabalhista", "descricao": "Defesa patronal · Gestão de passivos trabalhistas · Acordos e negociações coletivas" },
+      { "titulo": "Direito de Família", "descricao": "Divórcio e guarda compartilhada · Inventários e partilha · Planejamento patrimonial familiar" },
+      { "titulo": "Direito Imobiliário", "descricao": "Due diligence imobiliária · Compra, venda e locação · Regularização fundiária e usucapião" }
+    ]
+  },
+  "sobre": {
+    "sectionLabel": "Sobre",
+    "title1": "Advocacia que une",
+    "title2": "técnica e estratégia",
+    "p1": "Sou o Dr. Henrique Cavalcante, advogado criminalista e empresarial com mais de 15 anos dedicados à defesa de pessoas e empresas nos tribunais de São Paulo e no Superior Tribunal de Justiça.",
+    "p2": "Meu trabalho começa muito antes da audiência — na análise cuidadosa de cada detalhe do caso, na construção de uma tese sólida e na antecipação de cada movimento da parte contrária. Resultado não é sorte. É preparação.",
+    "photoAlt": "Dr. Henrique Cavalcante em seu escritório",
+    "diferenciais": [
+      "Atendimento personalizado e confidencial em todas as etapas",
+      "Estratégia jurídica construída com base nos detalhes do seu caso",
+      "Comunicação clara e transparente — sem juridiquês",
+      "Presença ativa nos tribunais de SP e instâncias superiores"
+    ],
+    "stats": [
+      { "label": "Anos de experiência" },
+      { "label": "Casos encerrados" },
+      { "label": "Taxa de êxito" },
+      { "label": "Clientes ativos" }
+    ]
+  },
+  "resultados": {
+    "sectionLabel": "Resultados",
+    "title1": "Números que comprovam",
+    "title2": "a excelência",
+    "subtitle": "Casos encerrados com êxito nos últimos 5 anos de atuação nos tribunais paulistas e instâncias superiores.",
+    "items": [
+      { "titulo": "Taxa de êxito", "descricao": "Em casos criminais e empresariais encerrados nos últimos 5 anos" },
+      { "titulo": "Casos encerrados", "descricao": "Processos conduzidos com dedicação integral do início ao fim" },
+      { "titulo": "Tempo de resposta", "descricao": "Prazo máximo para retorno após contato inicial de novos clientes" },
+      { "titulo": "Anos de atuação", "descricao": "Experiência sólida nos tribunais de SP e instâncias superiores" }
+    ]
+  },
+  "formacao": {
+    "sectionLabel": "Formação",
+    "title": "Trajetória acadêmica",
+    "assocLabel": "Associações",
+    "assocTitle": "Membros e entidades",
+    "credentialLabel": "Credencial",
+    "credentialTitle": "OAB/SP 123.456",
+    "credentialText": "Registro ativo junto à Seccional São Paulo da Ordem dos Advogados do Brasil. Atuação regular desde 2009 nos tribunais do estado.",
+    "items": [
+      { "ano": "2018", "titulo": "Doutorado em Direito Penal", "instituicao": "Universidade de São Paulo — USP" },
+      { "ano": "2014", "titulo": "Mestrado em Direito Empresarial", "instituicao": "Fundação Getulio Vargas — FGV Direito SP" },
+      { "ano": "2012", "titulo": "Especialização em Direito Criminal", "instituicao": "Escola Paulista da Magistratura — EPM" },
+      { "ano": "2009", "titulo": "Bacharelado em Direito", "instituicao": "Pontifícia Universidade Católica — PUC-SP" }
+    ],
+    "associacoes": [
+      { "sigla": "OAB", "nome": "Ordem dos Advogados do Brasil", "cargo": "Membro ativo · OAB/SP 123.456" },
+      { "sigla": "IASP", "nome": "Instituto dos Advogados de São Paulo", "cargo": "Membro efetivo" },
+      { "sigla": "IBDP", "nome": "Instituto Brasileiro de Direito Processual", "cargo": "Associado" }
+    ]
+  },
+  "depoimentos": {
+    "sectionLabel": "Depoimentos",
+    "title": "O que dizem nossos clientes",
+    "items": [
+      { "texto": "O Dr. Henrique atuou com precisão e discrição absoluta em um momento extremamente delicado para nossa empresa. O resultado superou todas as nossas expectativas e o processo foi resolvido em tempo recorde.", "nome": "Roberto M.", "perfil": "Empresário · Cliente há 4 anos", "iniciais": "RM" },
+      { "texto": "Profissionalismo impecável em cada etapa. Em um processo que parecia impossível de reverter, conseguimos um resultado favorável graças à estratégia jurídica cuidadosamente construída.", "nome": "Juliana C.", "perfil": "Diretora executiva · Cliente há 2 anos", "iniciais": "JC" },
+      { "texto": "Raridade encontrar um advogado que une conhecimento técnico profundo com comunicação transparente. Sei exatamente o que acontece no meu caso em todo momento. Confio completamente.", "nome": "Marcos A.", "perfil": "Sócio-fundador · Cliente há 6 anos", "iniciais": "MA" }
+    ]
+  },
+  "blogPreview": {
+    "sectionLabel": "Insights jurídicos",
+    "title": "Conhecimento que protege",
+    "viewAll": "Ver todos os artigos →",
+    "readArticle": "Ler artigo →",
+    "readTime": "min de leitura"
+  },
+  "faq": {
+    "sectionLabel": "FAQ",
+    "title": "Perguntas frequentes",
+    "items": [
+      { "pergunta": "Como funciona a primeira consulta?", "resposta": "A primeira consulta é confidencial e serve para compreender os detalhes do seu caso. Após a análise, apresento uma estratégia clara, o prazo estimado e as opções disponíveis. Você decide como prosseguir sem qualquer comprometimento antecipado." },
+      { "pergunta": "Quanto tempo demora um processo criminal?", "resposta": "A duração varia conforme a complexidade do caso, o tribunal competente e a carga de trabalho do juízo. Processos mais simples podem ser resolvidos em meses; casos complexos podem levar anos. O que posso garantir é que atuarei para acelerar ao máximo sem comprometer a qualidade da defesa." },
+      { "pergunta": "Qual a diferença entre advocacia preventiva e contenciosa?", "resposta": "A advocacia preventiva atua antes do surgimento do conflito — revisão de contratos, compliance, estruturação de negócios — para evitar litígios. A contenciosa atua quando o conflito já existe, em processos judiciais ou administrativos. A prevenção é sempre mais econômica e eficiente." },
+      { "pergunta": "Você atende por videoconferência?", "resposta": "Sim. Atendo clientes de todo o Brasil e do exterior por videoconferência com a mesma qualidade do atendimento presencial. Para casos que exigem presença em tribunais de São Paulo, estou disponível para comparecer pessoalmente." },
+      { "pergunta": "Como são cobrados os honorários advocatícios?", "resposta": "Os honorários são definidos caso a caso, conforme a complexidade, o tempo estimado e os recursos necessários. Trabalho com honorários fixos, por hora ou com êxito (em casos específicos). Tudo é discutido com transparência antes de qualquer contratação." }
+    ]
+  },
+  "cta": {
+    "label": "Próximo passo",
+    "title1": "Cada dia sem orientação jurídica",
+    "title2": "é um risco desnecessário.",
+    "description": "Agende uma consulta confidencial. Sem compromisso.",
+    "btn1": "Falar com o Dr. Henrique",
+    "btn1AriaLabel": "Falar com o Dr. Henrique Cavalcante via WhatsApp",
+    "btn2": "Enviar e-mail",
+    "btn2AriaLabel": "Enviar e-mail",
+    "whatsappMsg": "Olá, gostaria de agendar uma consulta com o Dr. Henrique Cavalcante."
+  },
+  "contato": {
+    "sectionLabel": "Contato",
+    "title": "Vamos conversar",
+    "whatsapp": "WhatsApp",
+    "email": "E-mail",
+    "address": "Endereço",
+    "addressValue": "Av. Paulista, 1811 · Sala 210 · Bela Vista · SP",
+    "hours": "Horários",
+    "hoursValue": "Seg–Sex: 8h–19h · Sáb: 9h–12h",
+    "modalities": "Modalidades",
+    "modalitiesValue": "Presencial · Online · Urgência",
+    "linkedin": "LinkedIn",
+    "mapPlaceholder": "Substitua por um Google Maps embed",
+    "mapAddress": "Av. Paulista, 1811 · Sala 210 · São Paulo"
+  },
+  "footer": {
+    "tagline": "Advocacia Premium",
+    "description": "Defesa jurídica de alto padrão para pessoas e empresas que não podem se dar ao luxo de errar.",
+    "whatsapp": "Falar no WhatsApp",
+    "whatsappAriaLabel": "Agendar consulta via WhatsApp",
+    "nav": "Navegação",
+    "contato": "Contato",
+    "hours1": "Seg–Sex: 8h–19h",
+    "hours2": "Sáb: 9h–12h (agendamento)",
+    "rights": "Todos os direitos reservados.",
+    "disclaimer": "As informações deste site têm caráter informativo e não constituem consultoria jurídica.",
+    "quickLinks": [
+      { "label": "Áreas de atuação", "href": "/#especialidades" },
+      { "label": "Sobre o escritório", "href": "/#sobre" },
+      { "label": "Resultados", "href": "/#resultados" },
+      { "label": "Insights jurídicos", "href": "/blog" },
+      { "label": "Contato", "href": "/#contato" }
+    ]
+  },
+  "blog": {
+    "breadcrumbHome": "Início",
+    "sectionLabel": "Blog",
+    "title": "Insights Jurídicos",
+    "categories": "Categorias",
+    "recentArticles": "Artigos recentes",
+    "newsletter": "Newsletter",
+    "newsTitle": "Receba insights jurídicos",
+    "newsDescription": "Artigos sobre direito criminal, empresarial e muito mais — direto no seu e-mail.",
+    "subscribe": "Inscrever-se",
+    "emailPlaceholder": "seu@email.com",
+    "emailLabel": "Seu endereço de e-mail",
+    "socialLinks": "Redes sociais",
+    "viewAll": "Ver todos os artigos →",
+    "readArticle": "Ler artigo →",
+    "readTime": "min de leitura",
+    "notFound": "Artigo não encontrado",
+    "inArticle": "Neste artigo",
+    "relatedArticles": "Artigos relacionados",
+    "authorBio": "Advogado criminalista e empresarial com 15 anos de atuação nos tribunais de São Paulo. OAB/SP 123.456.",
+    "consultAuthor": "Consulta com o autor →",
+    "articleApplies": "Este artigo se aplica ao seu caso?",
+    "needHelp": "Precisa de ajuda?",
+    "scheduleConsultation": "Agende uma consulta confidencial e descubra qual é a melhor estratégia para a sua situação.",
+    "talkToDoctor": "Falar com o Dr. Henrique",
+    "whatsappConsultMsg": "Olá, li o artigo \"{title}\" e gostaria de uma consulta.",
+    "linkedinAriaLabel": "Visite nosso LinkedIn",
+    "instagramAriaLabel": "Visite nosso Instagram",
+    "all": "Todos",
+    "searchPlaceholder": "Buscar artigos...",
+    "searchAriaLabel": "Buscar artigos",
+    "filterAriaLabel": "Filtrar por categoria",
+    "articlesAriaLabel": "Lista de artigos",
+    "noneFound": "Nenhum artigo encontrado.",
+    "pagination": "Paginação",
+    "pageLabel": "Página {page}"
+  },
+  "language": {
+    "pt-br": "Português",
+    "en": "English",
+    "switchTo": "Idioma"
+  }
+}

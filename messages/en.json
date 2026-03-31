@@ -1,0 +1,208 @@
+{
+  "header": {
+    "areas": "Practice Areas",
+    "sobre": "About",
+    "resultados": "Results",
+    "blog": "Blog",
+    "contato": "Contact",
+    "cta": "Free consultation",
+    "ctaAriaLabel": "Schedule a free consultation via WhatsApp",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "mobileMenuAriaLabel": "Navigation menu",
+    "language": "Language:"
+  },
+  "hero": {
+    "credential": "OAB/SP 123.456 · 15 years of practice",
+    "title1": "Your defense starts",
+    "title2": "with the right choice.",
+    "description": "High-standard criminal and business law. Strategy, discretion and results — from the first contact to the final ruling.",
+    "cta1": "Schedule consultation",
+    "cta1AriaLabel": "Schedule consultation via WhatsApp",
+    "cta2": "Meet the firm",
+    "badge1": "94% success rate",
+    "badge2": "+1,200 cases",
+    "photoAlt": "Dr. Henrique - Specialist attorney in criminal and business law",
+    "scrollHint": "Scroll to discover",
+    "whatsappMsg": "Hello, I would like to schedule a consultation with Dr. Henrique."
+  },
+  "especialidades": {
+    "sectionLabel": "Practice areas",
+    "title1": "What I can do",
+    "title2": "for you",
+    "items": [
+      { "titulo": "Criminal Law", "descricao": "Defense in crimes against persons and property · Habeas corpus · Appeals in superior courts" },
+      { "titulo": "Business Law", "descricao": "Contracts, M&A and corporate protection · Bankruptcy proceedings · Due diligence" },
+      { "titulo": "Tax Law", "descricao": "Tax planning · Recovery of tax credits · Defense in tax assessments" },
+      { "titulo": "Labor Law", "descricao": "Employer defense · Labor liability management · Agreements and collective bargaining" },
+      { "titulo": "Family Law", "descricao": "Divorce and shared custody · Estates and division · Family asset planning" },
+      { "titulo": "Real Estate Law", "descricao": "Real estate due diligence · Purchase, sale and lease · Land regularization and adverse possession" }
+    ]
+  },
+  "sobre": {
+    "sectionLabel": "About",
+    "title1": "Law practice that unites",
+    "title2": "technique and strategy",
+    "p1": "I am Dr. Henrique Cavalcante, a criminal and business attorney with over 15 years dedicated to defending individuals and companies in São Paulo courts and the Superior Court of Justice.",
+    "p2": "My work begins long before the hearing — in the careful analysis of each case detail, in building a solid thesis and anticipating each move by the opposing side. Results are not luck. It's preparation.",
+    "photoAlt": "Dr. Henrique Cavalcante in his office",
+    "diferenciais": [
+      "Personalized and confidential service at every stage",
+      "Legal strategy built based on the details of your case",
+      "Clear and transparent communication — no legal jargon",
+      "Active presence in São Paulo courts and higher courts"
+    ],
+    "stats": [
+      { "label": "Years of experience" },
+      { "label": "Closed cases" },
+      { "label": "Success rate" },
+      { "label": "Active clients" }
+    ]
+  },
+  "resultados": {
+    "sectionLabel": "Results",
+    "title1": "Numbers that prove",
+    "title2": "excellence",
+    "subtitle": "Cases successfully closed in the last 5 years of practice in São Paulo courts and higher courts.",
+    "items": [
+      { "titulo": "Success rate", "descricao": "In criminal and business cases closed in the last 5 years" },
+      { "titulo": "Closed cases", "descricao": "Proceedings conducted with full dedication from start to finish" },
+      { "titulo": "Response time", "descricao": "Maximum time to respond after initial contact from new clients" },
+      { "titulo": "Years of practice", "descricao": "Solid experience in São Paulo courts and higher courts" }
+    ]
+  },
+  "formacao": {
+    "sectionLabel": "Background",
+    "title": "Academic path",
+    "assocLabel": "Associations",
+    "assocTitle": "Members and entities",
+    "credentialLabel": "Credential",
+    "credentialTitle": "OAB/SP 123.456",
+    "credentialText": "Active registration with the São Paulo Section of the Brazilian Bar Association. Regular practice since 2009 in state courts.",
+    "items": [
+      { "ano": "2018", "titulo": "PhD in Criminal Law", "instituicao": "University of São Paulo — USP" },
+      { "ano": "2014", "titulo": "Master's in Business Law", "instituicao": "Fundação Getulio Vargas — FGV Law SP" },
+      { "ano": "2012", "titulo": "Specialization in Criminal Law", "instituicao": "Escola Paulista da Magistratura — EPM" },
+      { "ano": "2009", "titulo": "Bachelor of Laws", "instituicao": "Pontifical Catholic University — PUC-SP" }
+    ],
+    "associacoes": [
+      { "sigla": "OAB", "nome": "Brazilian Bar Association", "cargo": "Active member · OAB/SP 123.456" },
+      { "sigla": "IASP", "nome": "Institute of Lawyers of São Paulo", "cargo": "Effective member" },
+      { "sigla": "IBDP", "nome": "Brazilian Institute of Procedural Law", "cargo": "Associate" }
+    ]
+  },
+  "depoimentos": {
+    "sectionLabel": "Testimonials",
+    "title": "What our clients say",
+    "items": [
+      { "texto": "Dr. Henrique acted with precision and absolute discretion at an extremely sensitive time for our company. The result exceeded all our expectations and the case was resolved in record time.", "nome": "Roberto M.", "perfil": "Businessman · Client for 4 years", "iniciais": "RM" },
+      { "texto": "Impeccable professionalism at every stage. In a case that seemed impossible to reverse, we achieved a favorable result thanks to the carefully constructed legal strategy.", "nome": "Juliana C.", "perfil": "Executive Director · Client for 2 years", "iniciais": "JC" },
+      { "texto": "It's rare to find a lawyer who combines deep technical knowledge with transparent communication. I know exactly what's happening in my case at every moment. I trust completely.", "nome": "Marcos A.", "perfil": "Co-founder · Client for 6 years", "iniciais": "MA" }
+    ]
+  },
+  "blogPreview": {
+    "sectionLabel": "Legal insights",
+    "title": "Knowledge that protects",
+    "viewAll": "View all articles →",
+    "readArticle": "Read article →",
+    "readTime": "min read"
+  },
+  "faq": {
+    "sectionLabel": "FAQ",
+    "title": "Frequently asked questions",
+    "items": [
+      { "pergunta": "How does the first consultation work?", "resposta": "The first consultation is confidential and serves to understand the details of your case. After the analysis, I present a clear strategy, estimated timeline and available options. You decide how to proceed without any prior commitment." },
+      { "pergunta": "How long does a criminal case take?", "resposta": "The duration varies according to the complexity of the case, the competent court and the court's workload. Simpler cases can be resolved in months; complex cases can take years. What I can guarantee is that I will act to accelerate as much as possible without compromising the quality of the defense." },
+      { "pergunta": "What is the difference between preventive and contentious law?", "resposta": "Preventive law acts before a conflict arises — contract review, compliance, business structuring — to avoid litigation. Contentious law acts when the conflict already exists, in judicial or administrative proceedings. Prevention is always more economical and efficient." },
+      { "pergunta": "Do you attend by video conference?", "resposta": "Yes. I serve clients from all over Brazil and abroad by video conference with the same quality as in-person service. For cases requiring presence in São Paulo courts, I am available to attend in person." },
+      { "pergunta": "How are legal fees charged?", "resposta": "Fees are set on a case-by-case basis, according to complexity, estimated time and required resources. I work with fixed fees, hourly rates or success fees (in specific cases). Everything is discussed transparently before any engagement." }
+    ]
+  },
+  "cta": {
+    "label": "Next step",
+    "title1": "Every day without legal guidance",
+    "title2": "is an unnecessary risk.",
+    "description": "Schedule a confidential consultation. No commitment.",
+    "btn1": "Talk to Dr. Henrique",
+    "btn1AriaLabel": "Talk to Dr. Henrique Cavalcante via WhatsApp",
+    "btn2": "Send email",
+    "btn2AriaLabel": "Send email",
+    "whatsappMsg": "Hello, I would like to schedule a consultation with Dr. Henrique Cavalcante."
+  },
+  "contato": {
+    "sectionLabel": "Contact",
+    "title": "Let's talk",
+    "whatsapp": "WhatsApp",
+    "email": "E-mail",
+    "address": "Address",
+    "addressValue": "Av. Paulista, 1811 · Suite 210 · Bela Vista · SP",
+    "hours": "Hours",
+    "hoursValue": "Mon–Fri: 8am–7pm · Sat: 9am–12pm",
+    "modalities": "Modalities",
+    "modalitiesValue": "In-person · Online · Emergency",
+    "linkedin": "LinkedIn",
+    "mapPlaceholder": "Replace with a Google Maps embed",
+    "mapAddress": "Av. Paulista, 1811 · Suite 210 · São Paulo"
+  },
+  "footer": {
+    "tagline": "Premium Law Practice",
+    "description": "High-standard legal defense for individuals and companies that cannot afford to make mistakes.",
+    "whatsapp": "Talk on WhatsApp",
+    "whatsappAriaLabel": "Schedule consultation via WhatsApp",
+    "nav": "Navigation",
+    "contato": "Contact",
+    "hours1": "Mon–Fri: 8am–7pm",
+    "hours2": "Sat: 9am–12pm (by appointment)",
+    "rights": "All rights reserved.",
+    "disclaimer": "The information on this website is for informational purposes only and does not constitute legal advice.",
+    "quickLinks": [
+      { "label": "Practice Areas", "href": "/#especialidades" },
+      { "label": "About the Firm", "href": "/#sobre" },
+      { "label": "Results", "href": "/#resultados" },
+      { "label": "Legal Insights", "href": "/blog" },
+      { "label": "Contact", "href": "/#contato" }
+    ]
+  },
+  "blog": {
+    "breadcrumbHome": "Home",
+    "sectionLabel": "Blog",
+    "title": "Legal Insights",
+    "categories": "Categories",
+    "recentArticles": "Recent Articles",
+    "newsletter": "Newsletter",
+    "newsTitle": "Receive legal insights",
+    "newsDescription": "Articles on criminal law, business law and much more — straight to your email.",
+    "subscribe": "Subscribe",
+    "emailPlaceholder": "your@email.com",
+    "emailLabel": "Your email address",
+    "socialLinks": "Social Media",
+    "viewAll": "View all articles →",
+    "readArticle": "Read article →",
+    "readTime": "min read",
+    "notFound": "Article not found",
+    "inArticle": "In this article",
+    "relatedArticles": "Related articles",
+    "authorBio": "Criminal and business lawyer with 15 years of experience in São Paulo courts. OAB/SP 123.456.",
+    "consultAuthor": "Consultation with author →",
+    "articleApplies": "Does this article apply to your case?",
+    "needHelp": "Need help?",
+    "scheduleConsultation": "Schedule a confidential consultation and find out what is the best strategy for your situation.",
+    "talkToDoctor": "Talk to Dr. Henrique",
+    "whatsappConsultMsg": "Hello, I read the article \"{title}\" and would like a consultation.",
+    "linkedinAriaLabel": "Visit our LinkedIn",
+    "instagramAriaLabel": "Visit our Instagram",
+    "all": "All",
+    "searchPlaceholder": "Search articles...",
+    "searchAriaLabel": "Search articles",
+    "filterAriaLabel": "Filter by category",
+    "articlesAriaLabel": "Articles list",
+    "noneFound": "No articles found.",
+    "pagination": "Pagination",
+    "pageLabel": "Page {page}"
+  },
+  "language": {
+    "pt-br": "Português",
+    "en": "English",
+    "switchTo": "Language"
+  }
+}
