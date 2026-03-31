@@ -55,12 +55,16 @@ export default async function Contato() {
         })}
       </div>
 
-      <div className="reveal mt-10 rounded overflow-hidden border border-gold/10 bg-surface flex items-center justify-center" style={{ height: '280px' }} aria-label="Mapa de localização">
-        <div className="text-center">
-          <svg className="text-gold/20 mx-auto mb-3" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <p className="text-muted text-[13px]">{t('mapPlaceholder')}</p>
-          <p className="text-muted/50 text-[11px] mt-1">{t('mapAddress')}</p>
-        </div>
+      <div className="reveal mt-10 rounded overflow-hidden border border-gold/10" style={{ height: '320px' }} aria-label="Mapa de localização">
+        <iframe
+          title={t('mapAddress')}
+          src={`https://maps.google.com/maps?q=${encodeURIComponent(t('mapQuery'))}&output=embed&z=16`}
+          width="100%"
+          height="100%"
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          style={{ border: 0, filter: 'grayscale(30%) invert(5%) contrast(95%)' }}
+        />
       </div>
     </section>
   );

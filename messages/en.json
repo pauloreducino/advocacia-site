@@ -94,10 +94,15 @@
   "depoimentos": {
     "sectionLabel": "Testimonials",
     "title": "What our clients say",
+    "prev": "Previous testimonial",
+    "next": "Next testimonial",
+    "goTo": "Go to testimonial {n}",
     "items": [
-      { "texto": "Dr. Henrique acted with precision and absolute discretion at an extremely sensitive time for our company. The result exceeded all our expectations and the case was resolved in record time.", "nome": "Roberto M.", "perfil": "Businessman · Client for 4 years", "iniciais": "RM" },
-      { "texto": "Impeccable professionalism at every stage. In a case that seemed impossible to reverse, we achieved a favorable result thanks to the carefully constructed legal strategy.", "nome": "Juliana C.", "perfil": "Executive Director · Client for 2 years", "iniciais": "JC" },
-      { "texto": "It's rare to find a lawyer who combines deep technical knowledge with transparent communication. I know exactly what's happening in my case at every moment. I trust completely.", "nome": "Marcos A.", "perfil": "Co-founder · Client for 6 years", "iniciais": "MA" }
+      { "texto": "Dr. Henrique acted with precision and absolute discretion at an extremely sensitive time for our company. The result exceeded all our expectations and the case was resolved in record time.", "nome": "Roberto M.", "perfil": "Businessman · Client for 4 years", "iniciais": "RM", "foto": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=faces" },
+      { "texto": "Impeccable professionalism at every stage. In a case that seemed impossible to reverse, we achieved a favorable result thanks to the carefully constructed legal strategy.", "nome": "Juliana C.", "perfil": "Executive Director · Client for 2 years", "iniciais": "JC", "foto": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=80&h=80&fit=crop&crop=faces" },
+      { "texto": "It's rare to find a lawyer who combines deep technical knowledge with transparent communication. I know exactly what's happening in my case at every moment. I trust completely.", "nome": "Marcos A.", "perfil": "Co-founder · Client for 6 years", "iniciais": "MA", "foto": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=faces" },
+      { "texto": "I was in a situation that seemed hopeless. Dr. Henrique analyzed every detail, presented a clear strategy and achieved a result no other firm had managed. My gratitude is immense.", "nome": "Patricia V.", "perfil": "Physician · Client for 1 year", "iniciais": "PV", "foto": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=80&h=80&fit=crop&crop=faces" },
+      { "texto": "The handling of our labor case was exemplary. Beyond the technical expertise, the team maintained constant and transparent communication. I recommend without hesitation to any company needing employer defense.", "nome": "Eduardo S.", "perfil": "CEO · Client for 3 years", "iniciais": "ES", "foto": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=80&h=80&fit=crop&crop=faces" }
     ]
   },
   "blogPreview": {
@@ -142,7 +147,8 @@
     "modalitiesValue": "In-person · Online · Emergency",
     "linkedin": "LinkedIn",
     "mapPlaceholder": "Replace with a Google Maps embed",
-    "mapAddress": "Av. Paulista, 1811 · Suite 210 · São Paulo"
+    "mapAddress": "Av. Paulista, 1811 · Suite 210 · São Paulo",
+    "mapQuery": "Av. Paulista, 1811, Bela Vista, São Paulo, SP"
   },
   "footer": {
     "tagline": "Premium Law Practice",

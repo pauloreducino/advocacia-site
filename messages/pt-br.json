@@ -94,10 +94,15 @@
   "depoimentos": {
     "sectionLabel": "Depoimentos",
     "title": "O que dizem nossos clientes",
+    "prev": "Depoimento anterior",
+    "next": "Próximo depoimento",
+    "goTo": "Ir para depoimento {n}",
     "items": [
-      { "texto": "O Dr. Henrique atuou com precisão e discrição absoluta em um momento extremamente delicado para nossa empresa. O resultado superou todas as nossas expectativas e o processo foi resolvido em tempo recorde.", "nome": "Roberto M.", "perfil": "Empresário · Cliente há 4 anos", "iniciais": "RM" },
-      { "texto": "Profissionalismo impecável em cada etapa. Em um processo que parecia impossível de reverter, conseguimos um resultado favorável graças à estratégia jurídica cuidadosamente construída.", "nome": "Juliana C.", "perfil": "Diretora executiva · Cliente há 2 anos", "iniciais": "JC" },
-      { "texto": "Raridade encontrar um advogado que une conhecimento técnico profundo com comunicação transparente. Sei exatamente o que acontece no meu caso em todo momento. Confio completamente.", "nome": "Marcos A.", "perfil": "Sócio-fundador · Cliente há 6 anos", "iniciais": "MA" }
+      { "texto": "O Dr. Henrique atuou com precisão e discrição absoluta em um momento extremamente delicado para nossa empresa. O resultado superou todas as nossas expectativas e o processo foi resolvido em tempo recorde.", "nome": "Roberto M.", "perfil": "Empresário · Cliente há 4 anos", "iniciais": "RM", "foto": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=faces" },
+      { "texto": "Profissionalismo impecável em cada etapa. Em um processo que parecia impossível de reverter, conseguimos um resultado favorável graças à estratégia jurídica cuidadosamente construída.", "nome": "Juliana C.", "perfil": "Diretora executiva · Cliente há 2 anos", "iniciais": "JC", "foto": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=80&h=80&fit=crop&crop=faces" },
+      { "texto": "Raridade encontrar um advogado que une conhecimento técnico profundo com comunicação transparente. Sei exatamente o que acontece no meu caso em todo momento. Confio completamente.", "nome": "Marcos A.", "perfil": "Sócio-fundador · Cliente há 6 anos", "iniciais": "MA", "foto": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=faces" },
+      { "texto": "Estava em uma situação que parecia sem saída. O Dr. Henrique analisou cada detalhe, apresentou uma estratégia clara e obteve um resultado que nenhum outro escritório havia conseguido. Minha gratidão é enorme.", "nome": "Patricia V.", "perfil": "Médica · Cliente há 1 ano", "iniciais": "PV", "foto": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=80&h=80&fit=crop&crop=faces" },
+      { "texto": "A condução do nosso processo trabalhista foi exemplar. Além da competência técnica, a equipe manteve comunicação constante e transparente. Recomendo sem hesitar para qualquer empresa que precise de defesa patronal.", "nome": "Eduardo S.", "perfil": "CEO · Cliente há 3 anos", "iniciais": "ES", "foto": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=80&h=80&fit=crop&crop=faces" }
     ]
   },
   "blogPreview": {
@@ -142,7 +147,8 @@
     "modalitiesValue": "Presencial · Online · Urgência",
     "linkedin": "LinkedIn",
     "mapPlaceholder": "Substitua por um Google Maps embed",
-    "mapAddress": "Av. Paulista, 1811 · Sala 210 · São Paulo"
+    "mapAddress": "Av. Paulista, 1811 · Sala 210 · São Paulo",
+    "mapQuery": "Av. Paulista, 1811, Bela Vista, São Paulo, SP"
   },
   "footer": {
     "tagline": "Advocacia Premium",
