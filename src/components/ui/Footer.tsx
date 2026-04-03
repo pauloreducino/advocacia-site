@@ -73,6 +73,10 @@ export default async function Footer() {
             {t('disclaimer')}
           </p>
         </div>
+
+        <div className="pt-4 text-center">
+          <p className="text-[11px] text-muted/50">Desenvolvido por Paulo Reducino</p>
+        </div>
       </div>
     </footer>
   );
