@@ -36,7 +36,7 @@ export default async function CTABanner() {
       <div className="relative z-10 max-w-3xl mx-auto px-6 lg:px-10 text-center">
         <p className="section-label justify-center reveal mb-6">{t("label")}</p>
         <h2
-          className="font-display text-ivory leading-tight mb-5 reveal"
+          className="font-display font-semibold text-ivory leading-tight mb-5 reveal"
           style={{ fontSize: "clamp(1.8rem, 4vw, 3rem)" }}
         >
           {t("title1")}

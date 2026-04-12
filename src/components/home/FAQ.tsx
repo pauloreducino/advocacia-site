@@ -24,7 +24,7 @@ export default function FAQ() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <div className="max-w-4xl mx-auto px-6 lg:px-10">
         <p className="section-label reveal">{t('sectionLabel')}</p>
-        <h2 className="font-display text-3xl lg:text-4xl text-ivory mb-16 leading-tight reveal">{t('title')}</h2>
+        <h2 className="font-display font-semibold text-3xl lg:text-4xl text-ivory mb-16 leading-tight reveal">{t('title')}</h2>
 
         <div className="flex flex-col" role="list">
           {items.map((faq, i) => {

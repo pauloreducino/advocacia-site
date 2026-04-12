@@ -33,7 +33,7 @@ export default function BlogSidebar({ categories, recentArticles, currentSlug }:
             <li key={cat.slug}>
               <Link href={`/blog?categoria=${cat.slug}` as any} scroll={false} className="flex items-center justify-between py-2 text-muted text-[13px] hover:text-gold transition-colors duration-200 border-b border-gold/5 last:border-0">
                 <span>{cat.label}</span>
-                <span className="text-muted/50 text-[11px]">{cat.count ?? 0}</span>
+                <span className="text-muted text-[11px]">{cat.count ?? 0}</span>
               </Link>
             </li>
           ))}
@@ -48,7 +48,7 @@ export default function BlogSidebar({ categories, recentArticles, currentSlug }:
               <Link href={`/blog/${a.slug}` as any} className="group block">
                 <p className="text-[10px] text-gold tracking-[1px] uppercase mb-1">{a.categoryLabel}</p>
                 <p className="text-ivory text-[13px] leading-snug group-hover:text-gold transition-colors duration-200 line-clamp-2">{a.title}</p>
-                <p className="text-muted/60 text-[11px] mt-1">{formatDate(a.date)}</p>
+                <p className="text-muted text-[11px] mt-1">{formatDate(a.date)}</p>
               </Link>
             </li>
           ))}

@@ -38,7 +38,7 @@ export default function Hero() {
             <div className="w-8 h-px bg-gold flex-shrink-0" />
           </div>
 
-          <h1 className="font-display leading-[1.15] mb-6" style={{ fontSize: "clamp(2.4rem, 5.5vw, 4.2rem)", animation: "wipeIn 0.9s cubic-bezier(0.16,1,0.3,1) 0.1s both" }}>
+          <h1 className="font-display leading-[1.15] mb-6" style={{ fontSize: "clamp(2rem, 5.5vw, 4.2rem)", animation: "wipeIn 0.9s cubic-bezier(0.16,1,0.3,1) 0.1s both" }}>
             <span className="block text-ivory">{t("title1")}</span>
             <span className="block text-gold">{t("title2")}</span>
           </h1>
@@ -87,7 +87,7 @@ export default function Hero() {
       </div>
 
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10">
-        <span className="text-[9px] text-gold tracking-[2px] uppercase opacity-70">{t("scrollHint")}</span>
+        <span className="text-[11px] text-gold tracking-[2px] uppercase opacity-70">{t("scrollHint")}</span>
         <svg className="animate-bounce-soft" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" strokeWidth="1.5" opacity="0.7" aria-hidden="true">
           <path d="M12 5v14M5 12l7 7 7-7" />
         </svg>

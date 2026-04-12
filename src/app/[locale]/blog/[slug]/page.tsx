@@ -221,7 +221,7 @@ export default async function ArticlePage({ params }: Props) {
                         </div>
                         <p className="text-[10px] text-gold tracking-[1px] uppercase mb-1">{a.categoryLabel}</p>
                         <p className="text-ivory text-[13px] leading-snug group-hover:text-gold transition-colors duration-200 line-clamp-2 mb-2">{a.title}</p>
-                        <p className="text-muted/60 text-[11px]">{formatDate(a.date)}</p>
+                        <p className="text-muted text-[11px]">{formatDate(a.date)}</p>
                       </Link>
                     ))}
                   </div>

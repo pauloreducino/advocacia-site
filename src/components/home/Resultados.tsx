@@ -17,7 +17,7 @@ export default async function Resultados() {
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-16 gap-6">
           <div>
             <p className="section-label reveal">{t('sectionLabel')}</p>
-            <h2 className="font-display text-3xl lg:text-4xl text-ivory leading-tight reveal">
+            <h2 className="font-display font-semibold text-3xl lg:text-4xl text-ivory leading-tight reveal">
               {t('title1')}<br /><span className="text-gold">{t('title2')}</span>
             </h2>
           </div>

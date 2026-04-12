@@ -60,7 +60,7 @@ export default function Depoimentos() {
         {/* Header */}
         <div className="mb-14">
           <p className="section-label reveal">{t("sectionLabel")}</p>
-          <h2 className="font-display text-3xl lg:text-4xl text-ivory leading-tight reveal">
+          <h2 className="font-display font-semibold text-3xl lg:text-4xl text-ivory leading-tight reveal">
             {t("title")}
           </h2>
         </div>
@@ -212,7 +212,7 @@ export default function Depoimentos() {
         </div>
 
         {/* Contador */}
-        <p className="text-center text-[11px] text-muted/60 tracking-[3px] mt-3 tabular-nums">
+        <p className="text-center text-[11px] text-muted tracking-[3px] mt-3 tabular-nums">
           {String(active + 1).padStart(2, "0")} — {String(total).padStart(2, "0")}
         </p>
 

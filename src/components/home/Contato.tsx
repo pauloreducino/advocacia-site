@@ -36,14 +36,14 @@ export default async function Contato() {
   return (
     <section id="contato" aria-label="Informações de contato" className="py-14 lg:py-24 max-w-7xl mx-auto px-6 lg:px-10">
       <p className="section-label reveal">{t('sectionLabel')}</p>
-      <h2 className="font-display text-3xl lg:text-4xl text-ivory mb-16 leading-tight reveal">{t('title')}</h2>
+      <h2 className="font-display font-semibold text-3xl lg:text-4xl text-ivory mb-16 leading-tight reveal">{t('title')}</h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" role="group" aria-label="Canais de contato">
         {CONTATOS.map((c, i) => {
           const inner = (
             <>
               <div className="text-gold mb-4">{c.icon}</div>
-              <p className="text-[10px] text-gold tracking-[2px] uppercase mb-1">{c.label}</p>
+              <p className="text-[11px] text-gold tracking-[2px] uppercase mb-1">{c.label}</p>
               <p className="text-ivory text-[14px] leading-snug">{c.valor}</p>
             </>
           );

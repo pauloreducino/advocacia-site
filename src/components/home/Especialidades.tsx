@@ -25,7 +25,7 @@ export default async function Especialidades() {
       `}</style>
       <section id="especialidades" aria-label="Áreas de atuação" className="py-14 lg:py-24 max-w-7xl mx-auto px-6 lg:px-10">
         <p className="section-label reveal">{t('sectionLabel')}</p>
-        <h2 className="font-display text-3xl lg:text-4xl text-ivory mb-14 leading-tight reveal">
+        <h2 className="font-display font-semibold text-3xl lg:text-4xl text-ivory mb-14 leading-tight reveal">
           {t('title1')}<br className="hidden lg:block" /> {t('title2')}
         </h2>
         <div className="border-t border-gold/12" role="list" aria-label="Lista de especialidades">

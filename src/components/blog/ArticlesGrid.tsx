@@ -181,7 +181,7 @@ export default function ArticlesGrid({
                 <p className="text-muted text-[13px] leading-relaxed mb-3 line-clamp-3">
                   {a.excerpt}
                 </p>
-                <div className="flex items-center gap-3 text-muted/60 text-[11px]">
+                <div className="flex items-center gap-3 text-muted text-[11px]">
                   <span>{formatDate(a.date)}</span>
                   <span>·</span>
                   <span>{a.readTime} {t("readTime")}</span>

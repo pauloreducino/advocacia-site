@@ -31,7 +31,7 @@ export default function Sobre() {
 
         <div className="order-1 lg:order-2">
           <p className="section-label reveal">{t("sectionLabel")}</p>
-          <h2 className="font-display text-3xl lg:text-4xl text-ivory mb-6 leading-tight reveal">
+          <h2 className="font-display font-semibold text-3xl lg:text-4xl text-ivory mb-6 leading-tight reveal">
             {t("title1")}<br /><span className="text-gold">{t("title2")}</span>
           </h2>
           <p className="text-muted leading-relaxed mb-4 reveal" style={{ fontSize: "1rem" }}>{t("p1")}</p>

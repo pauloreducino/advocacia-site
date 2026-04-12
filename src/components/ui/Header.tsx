@@ -157,7 +157,7 @@ export default function Header() {
             </a>
           </div>
         </nav>
-        <p className="absolute bottom-8 left-8 text-[11px] text-muted/70 tracking-widest uppercase">
+        <p className="absolute bottom-8 left-8 text-[11px] text-muted tracking-widest uppercase">
           OAB/SP 123.456
         </p>
       </div>

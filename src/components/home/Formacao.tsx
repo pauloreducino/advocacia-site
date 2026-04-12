@@ -10,7 +10,7 @@ export default async function Formacao() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
         <div>
           <p className="section-label reveal">{t('sectionLabel')}</p>
-          <h2 className="font-display text-3xl text-ivory mb-14 leading-tight reveal">{t('title')}</h2>
+          <h2 className="font-display font-semibold text-3xl text-ivory mb-14 leading-tight reveal">{t('title')}</h2>
           <div className="relative" role="list" aria-label={t('sectionLabel')}>
             <div className="absolute left-[9px] top-0 bottom-0 w-px bg-gold/15" aria-hidden="true" />
             <div className="flex flex-col gap-10">
@@ -28,7 +28,7 @@ export default async function Formacao() {
 
         <div>
           <p className="section-label reveal">{t('assocLabel')}</p>
-          <h2 className="font-display text-3xl text-ivory mb-14 leading-tight reveal">{t('assocTitle')}</h2>
+          <h2 className="font-display font-semibold text-3xl text-ivory mb-14 leading-tight reveal">{t('assocTitle')}</h2>
           <div className="flex flex-col gap-px bg-gold/10 rounded overflow-hidden" role="list" aria-label={t('assocLabel')}>
             {assoc.map((a, i) => (
               <div key={i} role="listitem" className="reveal bg-surface px-6 py-6 flex items-center gap-5 group hover:bg-primary/70 transition-colors duration-200" style={{ transitionDelay: `${i * 80}ms` }}>
@@ -43,7 +43,7 @@ export default async function Formacao() {
             ))}
           </div>
           <div className="reveal mt-8 border border-gold/15 rounded p-6 bg-gold/[0.03]">
-            <p className="text-[10px] text-gold tracking-[2px] uppercase mb-3">{t('credentialLabel')}</p>
+            <p className="text-[11px] text-gold tracking-[2px] uppercase mb-3">{t('credentialLabel')}</p>
             <p className="font-display text-ivory text-lg mb-2">{t('credentialTitle')}</p>
             <p className="text-muted text-[13px] leading-relaxed">{t('credentialText')}</p>
           </div>
