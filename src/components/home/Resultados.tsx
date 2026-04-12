@@ -12,7 +12,7 @@ export default async function Resultados() {
   const items = t.raw('items') as Array<{ titulo: string; descricao: string }>;
 
   return (
-    <section id="resultados" aria-label="Resultados profissionais" className="py-24 bg-surface">
+    <section id="resultados" aria-label="Resultados profissionais" className="py-14 lg:py-24 bg-surface">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-16 gap-6">
           <div>

@@ -23,7 +23,7 @@ export default async function Especialidades() {
         .esp-icon { opacity: 0.5; transition: opacity 0.3s ease; }
         .esp-item:hover .esp-icon { opacity: 0.8; }
       `}</style>
-      <section id="especialidades" aria-label="Áreas de atuação" className="py-24 max-w-7xl mx-auto px-6 lg:px-10">
+      <section id="especialidades" aria-label="Áreas de atuação" className="py-14 lg:py-24 max-w-7xl mx-auto px-6 lg:px-10">
         <p className="section-label reveal">{t('sectionLabel')}</p>
         <h2 className="font-display text-3xl lg:text-4xl text-ivory mb-14 leading-tight reveal">
           {t('title1')}<br className="hidden lg:block" /> {t('title2')}

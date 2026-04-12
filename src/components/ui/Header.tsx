@@ -60,7 +60,7 @@ export default function Header() {
             <span className="font-display text-[17px] text-ivory tracking-wide">
               Dr. Henrique Cavalcante
             </span>
-            <span className="text-[10px] text-gold tracking-[3px] uppercase mt-0.5">
+            <span className="text-[8px] lg:text-[10px] text-gold tracking-[2px] lg:tracking-[3px] uppercase mt-0.5">
               Advocacia Criminal & Empresarial
             </span>
           </Link>

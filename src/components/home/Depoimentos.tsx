@@ -53,7 +53,7 @@ export default function Depoimentos() {
     <section
       id="depoimentos"
       aria-label="Depoimentos de clientes"
-      className="py-24 bg-deep overflow-hidden"
+      className="py-14 lg:py-24 bg-deep overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
 

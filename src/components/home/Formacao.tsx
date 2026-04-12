@@ -6,7 +6,7 @@ export default async function Formacao() {
   const assoc = t.raw('associacoes') as Array<{ sigla: string; nome: string; cargo: string }>;
 
   return (
-    <section id="formacao" aria-label="Formação acadêmica e associações" className="py-24 max-w-7xl mx-auto px-6 lg:px-10">
+    <section id="formacao" aria-label="Formação acadêmica e associações" className="py-14 lg:py-24 max-w-7xl mx-auto px-6 lg:px-10">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
         <div>
           <p className="section-label reveal">{t('sectionLabel')}</p>

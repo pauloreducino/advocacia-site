@@ -15,7 +15,7 @@ export default function Sobre() {
   const stats = t.raw("stats") as Array<{ label: string }>;
 
   return (
-    <section id="sobre" aria-label="Sobre o profissional" className="py-24 max-w-7xl mx-auto px-6 lg:px-10">
+    <section id="sobre" aria-label="Sobre o profissional" className="py-14 lg:py-24 max-w-7xl mx-auto px-6 lg:px-10">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
         <div className="reveal-left order-2 lg:order-1">
           <div className="relative">

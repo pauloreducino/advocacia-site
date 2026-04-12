@@ -8,7 +8,7 @@ export default async function BlogPreview() {
   const articles = await getLatestArticles(3);
 
   return (
-    <section id="blog" aria-label="Artigos jurídicos recentes" className="py-24 max-w-7xl mx-auto px-6 lg:px-10">
+    <section id="blog" aria-label="Artigos jurídicos recentes" className="py-14 lg:py-24 max-w-7xl mx-auto px-6 lg:px-10">
       <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-16 gap-6">
         <div>
           <p className="section-label reveal">{t('sectionLabel')}</p>

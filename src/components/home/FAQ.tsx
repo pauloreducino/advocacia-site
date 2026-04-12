@@ -20,7 +20,7 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" aria-label="Perguntas frequentes" className="py-24 bg-primary">
+    <section id="faq" aria-label="Perguntas frequentes" className="py-14 lg:py-24 bg-primary">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <div className="max-w-4xl mx-auto px-6 lg:px-10">
         <p className="section-label reveal">{t('sectionLabel')}</p>

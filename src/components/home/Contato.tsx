@@ -34,7 +34,7 @@ export default async function Contato() {
   const cls = 'reveal group border border-gold/10 rounded p-6 hover:border-gold/35 transition-colors duration-300 bg-surface/50 hover:bg-surface';
 
   return (
-    <section id="contato" aria-label="Informações de contato" className="py-24 max-w-7xl mx-auto px-6 lg:px-10">
+    <section id="contato" aria-label="Informações de contato" className="py-14 lg:py-24 max-w-7xl mx-auto px-6 lg:px-10">
       <p className="section-label reveal">{t('sectionLabel')}</p>
       <h2 className="font-display text-3xl lg:text-4xl text-ivory mb-16 leading-tight reveal">{t('title')}</h2>
 

@@ -30,8 +30,8 @@ export default function Hero() {
         </svg>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 w-full pt-28 pb-20 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-0 items-center min-h-screen">
-        <div className="flex flex-col">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 w-full pt-28 pb-20 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-0 items-center min-h-screen">
+        <div className="flex flex-col order-last lg:order-first">
           <div className="flex items-center gap-3 mb-7 animate-fade-up">
             <div className="w-8 h-px bg-gold flex-shrink-0" />
             <span className="text-[11px] text-gold tracking-[2.5px] uppercase">{t("credential")}</span>
@@ -47,29 +47,29 @@ export default function Hero() {
             {t("description")}
           </p>
 
-          <div className="flex flex-wrap gap-4 animate-fade-up-more">
+          <div className="flex flex-col lg:flex-row lg:flex-wrap gap-4 animate-fade-up-more">
             <a
               href={getWhatsAppUrl(t("whatsappMsg"))}
               target="_blank"
               rel="noopener noreferrer"
               aria-label={t("cta1AriaLabel")}
-              className="bg-gold text-primary font-body font-medium text-[12px] tracking-[1.5px] uppercase px-7 py-4 rounded-sm hover:bg-gold-light transition-all duration-200 hover:scale-[1.02]"
+              className="bg-gold text-primary font-body font-medium text-[12px] tracking-[1.5px] uppercase px-7 py-4 rounded-sm hover:bg-gold-light transition-all duration-200 hover:scale-[1.02] text-center lg:text-left"
             >
               {t("cta1")}
             </a>
             <a
               href="#sobre"
               aria-label={t("cta2")}
-              className="border border-gold text-gold font-body font-medium text-[12px] tracking-[1.5px] uppercase px-7 py-4 rounded-sm hover:bg-gold/10 transition-colors duration-200"
+              className="hidden lg:inline-flex border border-gold text-gold font-body font-medium text-[12px] tracking-[1.5px] uppercase px-7 py-4 rounded-sm hover:bg-gold/10 transition-colors duration-200"
             >
               {t("cta2")}
             </a>
           </div>
         </div>
 
-        <div className="relative flex justify-center lg:justify-end items-end h-full" style={{ animation: "fadeIn 1s ease 0.2s both" }}>
-          <div className="relative">
-            <div className="relative w-[260px] sm:w-[300px] h-[380px] sm:h-[440px] rounded-t-sm overflow-hidden" style={{ maskImage: "linear-gradient(to bottom, black 60%, transparent 100%)", WebkitMaskImage: "linear-gradient(to bottom, black 60%, transparent 100%)" }}>
+        <div className="relative flex justify-center lg:justify-end items-end h-full order-first lg:order-last" style={{ animation: "fadeIn 1s ease 0.2s both" }}>
+          <div className="relative w-full lg:w-auto flex justify-center lg:justify-end">
+            <div className="relative w-full max-w-[340px] lg:w-[300px] h-[320px] sm:h-[380px] lg:h-[440px] rounded-t-sm overflow-hidden" style={{ maskImage: "linear-gradient(to bottom, black 65%, transparent 100%)", WebkitMaskImage: "linear-gradient(to bottom, black 65%, transparent 100%)" }}>
               <Image src="/images/chief-executive.jpg" alt={t("photoAlt")} fill className="object-cover" priority />
               <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-gold/40" />
               <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-gold/40" />
