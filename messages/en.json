@@ -156,7 +156,15 @@
       "sending": "Sending...",
       "successTitle": "Message sent!",
       "successMessage": "We will contact you shortly.",
-      "errorMessage": "An error occurred. Please try again or contact us via WhatsApp."
+      "errorMessage": "An error occurred. Please try again or contact us via WhatsApp.",
+      "validation": {
+        "nameRequired": "Please enter your full name.",
+        "emailRequired": "Please enter your email.",
+        "emailInvalid": "Please enter a valid email.",
+        "subjectRequired": "Please select a subject.",
+        "messageRequired": "Please write your message.",
+        "consentRequired": "You must accept the terms to submit."
+      }
     }
   },
   "contato": {

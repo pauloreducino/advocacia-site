@@ -305,11 +305,15 @@ function SubjectSelect({
   onChange,
   placeholder,
   subjects,
+  required,
+  hasError,
 }: {
   value: string;
   onChange: (val: string) => void;
   placeholder: string;
   subjects: string[];
+  required?: boolean;
+  hasError?: boolean;
 }) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -329,11 +333,14 @@ function SubjectSelect({
         onClick={() => setOpen((p) => !p)}
         aria-haspopup="listbox"
         aria-expanded={open}
-        className={`w-full flex items-center justify-between bg-white/5 border border-gold/20 rounded-sm px-4 py-3.5 text-sm focus:outline-none focus:border-gold/50 transition-colors duration-200 hover:border-gold/40 ${
-          value ? "text-ivory" : "text-muted"
-        }`}
+        className={`w-full flex items-center justify-between bg-white/5 border rounded-sm px-4 py-3.5 text-sm focus:outline-none transition-colors duration-200 hover:border-gold/40 ${
+          hasError ? "border-red-400/60" : "border-gold/20 focus:border-gold/50"
+        } ${value ? "text-ivory" : "text-muted"}`}
       >
-        <span>{value || placeholder}</span>
+        <span>
+          {value || placeholder}
+          {required && !value && <span className="text-gold/70 ml-1">*</span>}
+        </span>
         <svg
           width="12"
           height="12"
@@ -401,11 +408,26 @@ export default function CTAForm() {
   });
 
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+  const [errors, setErrors] = useState<Partial<Record<keyof typeof form, string>>>({});
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   const set = (key: keyof typeof form) =>
-    (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) =>
+    (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
       setForm((prev) => ({ ...prev, [key]: e.target.value }));
+      if (errors[key]) setErrors((prev) => ({ ...prev, [key]: undefined }));
+    };
+
+  const validate = () => {
+    const v = t.raw("form.validation") as Record<string, string>;
+    const e: Partial<Record<keyof typeof form, string>> = {};
+    if (!form.nome.trim())                          e.nome = v.nameRequired;
+    if (!form.email.trim())                         e.email = v.emailRequired;
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) e.email = v.emailInvalid;
+    if (!form.assunto)                              e.assunto = v.subjectRequired;
+    if (!form.mensagem.trim())                      e.mensagem = v.messageRequired;
+    if (!form.consent)                              e.consent = v.consentRequired;
+    return e;
+  };
 
   const handleMessageChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     const value = e.target.value;
@@ -418,6 +440,8 @@ export default function CTAForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    const errs = validate();
+    if (Object.keys(errs).length > 0) { setErrors(errs); return; }
     setStatus("sending");
     try {
       const res = await fetch("/api/contato", {
@@ -464,38 +488,42 @@ export default function CTAForm() {
       aria-label="Formulário de contato"
     >
       {/* Nome completo */}
-      <div className="relative">
-        <input
-          type="text"
-          id="cta-nome"
-          placeholder=" "
-          required
-          autoComplete="name"
-          value={form.nome}
-          onChange={set("nome")}
-          className={inputBase}
-        />
-        <label htmlFor="cta-nome" className={labelBase}>
-          {t("form.nameLabel")}
-        </label>
+      <div>
+        <div className="relative">
+          <input
+            type="text"
+            id="cta-nome"
+            placeholder=" "
+            autoComplete="name"
+            value={form.nome}
+            onChange={set("nome")}
+            className={`${inputBase} ${errors.nome ? "border-red-400/60" : ""}`}
+          />
+          <label htmlFor="cta-nome" className={labelBase}>
+            {t("form.nameLabel")} <span className="text-gold/70">*</span>
+          </label>
+        </div>
+        {errors.nome && <p className="mt-1 ml-1 text-[11px] text-red-400">{errors.nome}</p>}
       </div>
 
       {/* Email + Telefone */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div className="relative">
-          <input
-            type="email"
-            id="cta-email"
-            placeholder=" "
-            required
-            autoComplete="email"
-            value={form.email}
-            onChange={set("email")}
-            className={inputBase}
-          />
-          <label htmlFor="cta-email" className={labelBase}>
-            {t("form.emailLabel")}
-          </label>
+        <div>
+          <div className="relative">
+            <input
+              type="email"
+              id="cta-email"
+              placeholder=" "
+              autoComplete="email"
+              value={form.email}
+              onChange={set("email")}
+              className={`${inputBase} ${errors.email ? "border-red-400/60" : ""}`}
+            />
+            <label htmlFor="cta-email" className={labelBase}>
+              {t("form.emailLabel")} <span className="text-gold/70">*</span>
+            </label>
+          </div>
+          {errors.email && <p className="mt-1 ml-1 text-[11px] text-red-400">{errors.email}</p>}
         </div>
 
         <div className="flex gap-2">
@@ -522,28 +550,33 @@ export default function CTAForm() {
       </div>
 
       {/* Assunto */}
-      <SubjectSelect
-        value={form.assunto}
-        onChange={(val) => setForm((prev) => ({ ...prev, assunto: val }))}
-        placeholder={t("form.subjectDefault")}
-        subjects={subjects}
-      />
+      <div>
+        <SubjectSelect
+          value={form.assunto}
+          onChange={(val) => { setForm((prev) => ({ ...prev, assunto: val })); setErrors((prev) => ({ ...prev, assunto: undefined })); }}
+          placeholder={t("form.subjectDefault")}
+          subjects={subjects}
+          required
+          hasError={!!errors.assunto}
+        />
+        {errors.assunto && <p className="mt-1 ml-1 text-[11px] text-red-400">{errors.assunto}</p>}
+      </div>
 
       {/* Mensagem */}
+      <div>
       <div className="relative">
         <textarea
           ref={textareaRef}
           id="cta-mensagem"
           placeholder=" "
-          required
           rows={3}
           value={form.mensagem}
-          onChange={handleMessageChange}
-          className={`${inputBase} resize-y overflow-auto pb-7`}
+          onChange={(e) => { handleMessageChange(e); if (errors.mensagem) setErrors((prev) => ({ ...prev, mensagem: undefined })); }}
+          className={`${inputBase} resize-y overflow-auto pb-7 ${errors.mensagem ? "border-red-400/60" : ""}`}
           style={{ minHeight: "96px" }}
         />
         <label htmlFor="cta-mensagem" className={labelTextarea}>
-          {t("form.messageLabel")}
+          {t("form.messageLabel")} <span className="text-gold/70">*</span>
         </label>
 
         {/* Contador de caracteres */}
@@ -569,21 +602,24 @@ export default function CTAForm() {
           </svg>
         </span>
       </div>
+      {errors.mensagem && <p className="mt-1 ml-1 text-[11px] text-red-400">{errors.mensagem}</p>}
+      </div>
 
       {/* Consentimento */}
-      <label className="flex items-start gap-3 cursor-pointer group">
-        <input
-          type="checkbox"
-          required
-          checked={form.consent}
-          onChange={(e) => setForm((prev) => ({ ...prev, consent: e.target.checked }))}
-          className="mt-0.5 w-4 h-4 flex-shrink-0 cursor-pointer accent-gold"
-          aria-required="true"
-        />
-        <span className="text-[12px] text-muted/80 group-hover:text-muted transition-colors leading-relaxed">
-          {t("form.consentLabel")}
-        </span>
-      </label>
+      <div>
+        <label className="flex items-start gap-3 cursor-pointer group">
+          <input
+            type="checkbox"
+            checked={form.consent}
+            onChange={(e) => { setForm((prev) => ({ ...prev, consent: e.target.checked })); if (errors.consent) setErrors((prev) => ({ ...prev, consent: undefined })); }}
+            className={`mt-0.5 w-4 h-4 flex-shrink-0 cursor-pointer accent-gold ${errors.consent ? "outline outline-1 outline-red-400/60 rounded-sm" : ""}`}
+          />
+          <span className="text-[12px] text-muted/80 group-hover:text-muted transition-colors leading-relaxed">
+            {t("form.consentLabel")}
+          </span>
+        </label>
+        {errors.consent && <p className="mt-1 ml-7 text-[11px] text-red-400">{errors.consent}</p>}
+      </div>
 
       {/* Botão enviar */}
       <button

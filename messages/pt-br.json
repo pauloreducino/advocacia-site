@@ -156,7 +156,15 @@
       "sending": "Enviando...",
       "successTitle": "Mensagem enviada!",
       "successMessage": "Em breve entraremos em contato.",
-      "errorMessage": "Ocorreu um erro. Tente novamente ou entre em contato via WhatsApp."
+      "errorMessage": "Ocorreu um erro. Tente novamente ou entre em contato via WhatsApp.",
+      "validation": {
+        "nameRequired": "Por favor, informe seu nome completo.",
+        "emailRequired": "Por favor, informe seu e-mail.",
+        "emailInvalid": "Informe um e-mail válido.",
+        "subjectRequired": "Por favor, selecione um assunto.",
+        "messageRequired": "Por favor, escreva sua mensagem.",
+        "consentRequired": "É necessário aceitar os termos para enviar."
+      }
     }
   },
   "contato": {
