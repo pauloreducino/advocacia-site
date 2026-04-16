@@ -16,7 +16,7 @@
     "credential": "OAB/SP 123.456 · 15 anos de atuação",
     "title1": "Sua defesa começa",
     "title2": "com a escolha certa.",
-    "description": "Advocacia criminal e empresarial de alto padrão. Estratégia, sigilo e resultados — do primeiro contato ao trânsito em julgado.",
+    "description": "Advocacia criminal e empresarial de alto padrão. Estratégia, sigilo e resultados do primeiro contato ao trânsito em julgado.",
     "cta1": "Agendar consulta",
     "cta1AriaLabel": "Agendar consulta via WhatsApp",
     "cta2": "Conheça o escritório",
@@ -44,12 +44,12 @@
     "title1": "Advocacia que une",
     "title2": "técnica e estratégia",
     "p1": "Sou o Dr. Henrique Cavalcante, advogado criminalista e empresarial com mais de 15 anos dedicados à defesa de pessoas e empresas nos tribunais de São Paulo e no Superior Tribunal de Justiça.",
-    "p2": "Meu trabalho começa muito antes da audiência — na análise cuidadosa de cada detalhe do caso, na construção de uma tese sólida e na antecipação de cada movimento da parte contrária. Resultado não é sorte. É preparação.",
+    "p2": "Meu trabalho começa muito antes da audiência: na análise cuidadosa de cada detalhe do caso, na construção de uma tese sólida e na antecipação de cada movimento da parte contrária. Resultado não é sorte. É preparação.",
     "photoAlt": "Dr. Henrique Cavalcante em seu escritório",
     "diferenciais": [
       "Atendimento personalizado e confidencial em todas as etapas",
       "Estratégia jurídica construída com base nos detalhes do seu caso",
-      "Comunicação clara e transparente — sem juridiquês",
+      "Comunicação clara e transparente, sem juridiquês",
       "Presença ativa nos tribunais de SP e instâncias superiores"
     ],
     "stats": [
@@ -118,7 +118,7 @@
     "items": [
       { "pergunta": "Como funciona a primeira consulta?", "resposta": "A primeira consulta é confidencial e serve para compreender os detalhes do seu caso. Após a análise, apresento uma estratégia clara, o prazo estimado e as opções disponíveis. Você decide como prosseguir sem qualquer comprometimento antecipado." },
       { "pergunta": "Quanto tempo demora um processo criminal?", "resposta": "A duração varia conforme a complexidade do caso, o tribunal competente e a carga de trabalho do juízo. Processos mais simples podem ser resolvidos em meses; casos complexos podem levar anos. O que posso garantir é que atuarei para acelerar ao máximo sem comprometer a qualidade da defesa." },
-      { "pergunta": "Qual a diferença entre advocacia preventiva e contenciosa?", "resposta": "A advocacia preventiva atua antes do surgimento do conflito — revisão de contratos, compliance, estruturação de negócios — para evitar litígios. A contenciosa atua quando o conflito já existe, em processos judiciais ou administrativos. A prevenção é sempre mais econômica e eficiente." },
+      { "pergunta": "Qual a diferença entre advocacia preventiva e contenciosa?", "resposta": "A advocacia preventiva atua antes do surgimento do conflito, como revisão de contratos, compliance e estruturação de negócios, para evitar litígios. A contenciosa atua quando o conflito já existe, em processos judiciais ou administrativos. A prevenção é sempre mais econômica e eficiente." },
       { "pergunta": "Você atende por videoconferência?", "resposta": "Sim. Atendo clientes de todo o Brasil e do exterior por videoconferência com a mesma qualidade do atendimento presencial. Para casos que exigem presença em tribunais de São Paulo, estou disponível para comparecer pessoalmente." },
       { "pergunta": "Como são cobrados os honorários advocatícios?", "resposta": "Os honorários são definidos caso a caso, conforme a complexidade, o tempo estimado e os recursos necessários. Trabalho com honorários fixos, por hora ou com êxito (em casos específicos). Tudo é discutido com transparência antes de qualquer contratação." }
     ]
@@ -132,7 +132,32 @@
     "btn1AriaLabel": "Falar com o Dr. Henrique Cavalcante via WhatsApp",
     "btn2": "Enviar e-mail",
     "btn2AriaLabel": "Enviar e-mail",
-    "whatsappMsg": "Olá, gostaria de agendar uma consulta com o Dr. Henrique Cavalcante."
+    "whatsappMsg": "Olá, gostaria de agendar uma consulta com o Dr. Henrique Cavalcante.",
+    "form": {
+      "nameLabel": "Nome completo",
+      "emailLabel": "E-mail",
+      "phoneLabel": "Telefone",
+      "subjectLabel": "Assunto",
+      "subjectDefault": "Selecione o assunto",
+      "subjects": [
+        "Direito Criminal",
+        "Direito Empresarial",
+        "Consultoria Preventiva",
+        "Revisão de Contratos",
+        "Compliance",
+        "Habeas Corpus",
+        "Recursos e Apelações",
+        "Outro"
+      ],
+      "messageLabel": "Mensagem",
+      "charCount": "caracteres restantes",
+      "consentLabel": "Concordo em fornecer estas informações para uso exclusivo de contato profissional com o escritório.",
+      "submitBtn": "Enviar mensagem",
+      "sending": "Enviando...",
+      "successTitle": "Mensagem enviada!",
+      "successMessage": "Em breve entraremos em contato.",
+      "errorMessage": "Ocorreu um erro. Tente novamente ou entre em contato via WhatsApp."
+    }
   },
   "contato": {
     "sectionLabel": "Contato",

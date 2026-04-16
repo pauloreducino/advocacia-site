@@ -132,7 +132,32 @@
     "btn1AriaLabel": "Talk to Dr. Henrique Cavalcante via WhatsApp",
     "btn2": "Send email",
     "btn2AriaLabel": "Send email",
-    "whatsappMsg": "Hello, I would like to schedule a consultation with Dr. Henrique Cavalcante."
+    "whatsappMsg": "Hello, I would like to schedule a consultation with Dr. Henrique Cavalcante.",
+    "form": {
+      "nameLabel": "Full name",
+      "emailLabel": "Email",
+      "phoneLabel": "Phone",
+      "subjectLabel": "Subject",
+      "subjectDefault": "Select a subject",
+      "subjects": [
+        "Criminal Law",
+        "Business Law",
+        "Preventive Consulting",
+        "Contract Review",
+        "Compliance",
+        "Habeas Corpus",
+        "Appeals",
+        "Other"
+      ],
+      "messageLabel": "Message",
+      "charCount": "characters remaining",
+      "consentLabel": "I agree to provide this information for exclusive professional contact use by the firm.",
+      "submitBtn": "Send message",
+      "sending": "Sending...",
+      "successTitle": "Message sent!",
+      "successMessage": "We will contact you shortly.",
+      "errorMessage": "An error occurred. Please try again or contact us via WhatsApp."
+    }
   },
   "contato": {
     "sectionLabel": "Contact",

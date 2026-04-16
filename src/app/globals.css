@@ -24,6 +24,11 @@
   padding: 0;
 }
 
+textarea::-webkit-resizer {
+  display: none;
+}
+
+
 html {
   scroll-behavior: smooth;
 }
